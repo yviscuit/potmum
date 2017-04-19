@@ -26,6 +26,7 @@ class Authentication < ApplicationRecord
       services.delete(:slack) unless ENV['USE_SLACK'].to_i != 0
       services.delete(:twitter) unless ENV['USE_TWITTER'].to_i != 0
       services.delete(:developer) unless ENV['USE_DEVELOPER'].to_i != 0
+      services.delete(:azure_activedirectory) unless ENV['USE_AZURE_AD'].to_i != 0
       services
     end
   end
@@ -35,6 +36,7 @@ class Authentication < ApplicationRecord
     github: ENV['GITHUB_ENTERPRISE_URL'] ? 'GitHub:e' : 'GitHub',
     slack: "Slack#{ENV['SLACK_TEAM_NAME'] ? "(#{ENV['SLACK_TEAM_NAME']})" : ''}",
     twitter: 'Twitter',
-    developer: 'Developer'
+    developer: 'Developer',
+    azureactivedirectory: 'Azure AD'
   }.with_indifferent_access
 end

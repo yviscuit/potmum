@@ -41,6 +41,11 @@ Rails.application.config.middleware.use OmniAuth::Builder do
   if ENV['USE_DEVELOPER']
     provider :developer, fields: [:nickname], uid_field: :nickname
   end
+
+  # Azure Active Directory
+  if ENV['USE_AZURE_AD']
+    provider :azure_activedirectory, ENV['AZURE_AD_KEY'], ENV['AZURE_AD_DOMAIN']
+  end
 end
 
 OmniAuth.config.on_failure = proc do |env|

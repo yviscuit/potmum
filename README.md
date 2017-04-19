@@ -61,6 +61,9 @@ I have assumed the use in Heroku or dokku.
 |ENV['USE_TWITTER']|Boolean||Allow login with Twitter account|
 |ENV['TWITTER_KEY']|String||Twitter API Key|
 |ENV['TWITTER_SECRET']|String||Twitter API Secret Key|
+|ENV['USE_AZURE_AD']|Boolean||Allow login with Azure AD(Office 365) account|
+|ENV['AZURE_AD_KEY']|String||Azure AD OpenID Connect Client ID|
+|ENV['AZURE_AD_DOMAIN']|String||*only use Azure AD Account*<br>Azure AD Domains<br>(ex. `hazimu.com, example.com`)|
 |ENV['NOTIFY_SLACK_CHANNEL']|String||Notify channel<br>ex) #general|
 |ENV['NOTIFY_SLACK_ICON']|String||Slack icon URL or emoji|
 |ENV['NOTIFY_SLACK_TOKEN']|String||Slack API Token|

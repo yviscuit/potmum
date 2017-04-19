@@ -24,6 +24,7 @@ gem 'omniauth-google-oauth2',
 gem 'omniauth-github'
 gem 'omniauth-slack'
 gem 'omniauth-twitter'
+gem 'omniauth-azure-activedirectory'
 
 gem 'slack-api'
 
